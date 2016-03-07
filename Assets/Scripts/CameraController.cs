@@ -5,6 +5,7 @@ public class CameraController : MonoBehaviour {
 
 	public float speedCam = 3;
 	public float speedZoom = 40;
+	public float altitude = 1;  //1..10
 
 	// Use this for initialization
 	void Start () {
@@ -44,6 +45,6 @@ public class CameraController : MonoBehaviour {
 			posCam.y = 1; 
 
 		transform.position = posCam;
-
+        altitude = posCam.y;
 	}
 }

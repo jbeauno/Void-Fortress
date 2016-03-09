@@ -35,7 +35,7 @@ public class AudioTrackBehaviour : MonoBehaviour {
                 pente = (p2Volume - p1Volume) / (p2Altitude - p1Altitude);
 
 
-            res = p1Volume + pente * altitude;
+            res = p1Volume + pente * (altitude - p1Altitude);
 
             print("pente: " + pente);
             print("p1Volume: " + p1Volume);

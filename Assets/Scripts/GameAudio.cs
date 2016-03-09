@@ -22,8 +22,13 @@ public class GameAudio : MonoBehaviour {
 
     private void mixMusic()
     {
+
+        //MixerMain.SetFloat("bells_volume", -80);
+        //MixerMain.SetFloat("bass_fx_volume", -80);
+        //MixerMain.SetFloat("drum_trad_volume", -80);    
+
         MixerMain.SetFloat("bells_volume", GameObject.Find("bells").GetComponent<AudioTrackBehaviour>().GetVolume(Camera.altitude));
         MixerMain.SetFloat("bass_fx_volume", GameObject.Find("bassfx").GetComponent<AudioTrackBehaviour>().GetVolume(Camera.altitude));
-        MixerMain.SetFloat("drum_trad_volume", GameObject.Find("drumtrad").GetComponent<AudioTrackBehaviour>().GetVolume(Camera.altitude));       
+        MixerMain.SetFloat("drum_trad_volume", GameObject.Find("drumtrad").GetComponent<AudioTrackBehaviour>().GetVolume(Camera.altitude));          
     }
 }
